@@ -21,7 +21,6 @@
         "ChangeTracking",
         "Security",
         "SecurityInsights",
-        "ServiceMap",
         "SQLAdvancedThreatProtection",
         "SQLVulnerabilityAssessment",
         "SQLAssessment",
@@ -40,7 +39,7 @@
     },
     "parTags": {
       "value": {
-        "Environment": "POC"
+        "Environment": "Live"
       }
     },
     "parTelemetryOptOut": {

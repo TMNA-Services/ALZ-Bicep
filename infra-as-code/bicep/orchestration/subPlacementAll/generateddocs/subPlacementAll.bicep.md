@@ -6,12 +6,13 @@ Orchestration module that helps to define where all Subscriptions should be plac
 
 Parameter name | Required | Description
 -------------- | -------- | -----------
-parTopLevelManagementGroupPrefix | No       | Prefix for the management group hierarchy.  This management group will be created as part of the deployment. Default: alz
+parTopLevelManagementGroupPrefix | No       | Prefix for the management group hierarchy.  This management group will be created as part of the deployment.
 parTopLevelManagementGroupSuffix | No       | Optional suffix for the management group hierarchy. This suffix will be appended to management group names/IDs. Include a preceding dash if required. Example: -suffix
 parIntRootMgSubs | No       | An array of Subscription IDs to place in the Intermediate Root Management Group. Default: Empty Array
 parPlatformMgSubs | No       | An array of Subscription IDs to place in the Platform Management Group. Default: Empty Array
 parPlatformManagementMgSubs | No       | An array of Subscription IDs to place in the (Platform) Management Management Group. Default: Empty Array
 parPlatformConnectivityMgSubs | No       | An array of Subscription IDs to place in the (Platform) Connectivity Management Group. Default: Empty Array
+parPlatformMgChildrenSubs | No       | Dictionary Object to allow additional or different child Management Groups of the Platform Management Group describing the Subscription IDs which each of them contain. Default: Empty Object
 parPlatformIdentityMgSubs | No       | An array of Subscription IDs to place in the (Platform) Identity Management Group. Default: Empty Array
 parLandingZonesMgSubs | No       | An array of Subscription IDs to place in the Landing Zones Management Group. Default: Empty Array
 parLandingZonesCorpMgSubs | No       | An array of Subscription IDs to place in the Corp (Landing Zones) Management Group. Default: Empty Array
@@ -21,13 +22,13 @@ parLandingZonesConfidentialOnlineMgSubs | No       | An array of Subscription ID
 parLandingZoneMgChildrenSubs | No       | Dictionary Object to allow additional or different child Management Groups of the Landing Zones Management Group describing the Subscription IDs which each of them contain. Default: Empty Object
 parDecommissionedMgSubs | No       | An array of Subscription IDs to place in the Decommissioned Management Group. Default: Empty Array
 parSandboxMgSubs | No       | An array of Subscription IDs to place in the Sandbox Management Group. Default: Empty Array
-parTelemetryOptOut | No       | Set Parameter to true to Opt-out of deployment telemetry. Default: false
+parTelemetryOptOut | No       | Set Parameter to true to Opt-out of deployment telemetry.
 
 ### parTopLevelManagementGroupPrefix
 
 ![Parameter Setting](https://img.shields.io/badge/parameter-optional-green?style=flat-square)
 
-Prefix for the management group hierarchy.  This management group will be created as part of the deployment. Default: alz
+Prefix for the management group hierarchy.  This management group will be created as part of the deployment.
 
 - Default value: `alz`
 
@@ -60,6 +61,12 @@ An array of Subscription IDs to place in the (Platform) Management Management Gr
 ![Parameter Setting](https://img.shields.io/badge/parameter-optional-green?style=flat-square)
 
 An array of Subscription IDs to place in the (Platform) Connectivity Management Group. Default: Empty Array
+
+### parPlatformMgChildrenSubs
+
+![Parameter Setting](https://img.shields.io/badge/parameter-optional-green?style=flat-square)
+
+Dictionary Object to allow additional or different child Management Groups of the Platform Management Group describing the Subscription IDs which each of them contain. Default: Empty Object
 
 ### parPlatformIdentityMgSubs
 
@@ -119,7 +126,7 @@ An array of Subscription IDs to place in the Sandbox Management Group. Default: 
 
 ![Parameter Setting](https://img.shields.io/badge/parameter-optional-green?style=flat-square)
 
-Set Parameter to true to Opt-out of deployment telemetry. Default: false
+Set Parameter to true to Opt-out of deployment telemetry.
 
 - Default value: `False`
 
@@ -152,6 +159,9 @@ Set Parameter to true to Opt-out of deployment telemetry. Default: false
         },
         "parPlatformConnectivityMgSubs": {
             "value": []
+        },
+        "parPlatformMgChildrenSubs": {
+            "value": {}
         },
         "parPlatformIdentityMgSubs": {
             "value": []
