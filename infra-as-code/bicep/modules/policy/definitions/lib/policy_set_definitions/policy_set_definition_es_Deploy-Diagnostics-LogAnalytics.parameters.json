@@ -69,9 +69,6 @@
       "logAnalytics": {
         "value": "[[parameters('logAnalytics')]"
       },
-      "logAnalyticsDestinationType": {
-        "value": "[[parameters('APIMgmtLogAnalyticsDestinationType')]"
-      },
       "effect": {
         "value": "[[parameters('APIMgmtLogAnalyticsEffect')]"
       },
@@ -344,9 +341,6 @@
     "parameters": {
       "logAnalytics": {
         "value": "[[parameters('logAnalytics')]"
-      },
-      "logAnalyticsDestinationType": {
-        "value": "[[parameters('FirewallLogAnalyticsDestinationType')]"
       },
       "effect": {
         "value": "[[parameters('FirewallLogAnalyticsEffect')]"
